@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #6c3bff;
+  --color-brand-dark: #5a2ee6;
+  --color-brand-light: #efeaff;
+  --color-surface: #f5f5f7;
+  --color-muted: #6b7280;
+  --color-ink: #111118;
+
+  --shadow-soft: 0 1px 2px rgb(17 17 24 / 0.04), 0 8px 24px rgb(17 17 24 / 0.06);
+  --shadow-brand: 0 8px 24px rgb(108 59 255 / 0.28);
+
+  --animate-enter-next: enter-next 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-enter-prev: enter-prev 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-up: fade-up 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes enter-next {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes enter-prev {
+    from { opacity: 0; transform: translateX(-24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
