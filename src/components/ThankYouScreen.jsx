@@ -24,7 +24,8 @@ export default function ThankYouScreen({ responseId }) {
     try {
       await saveLead({ instagram, responseId });
       setStatus("sent");
-    } catch {
+    } catch (error) {
+      console.error("Erro ao salvar Instagram:", error);
       setStatus("error");
       setError("Não foi possível enviar agora. Tente novamente.");
     }
@@ -61,7 +62,7 @@ export default function ThankYouScreen({ responseId }) {
       >
         {status === "sent" ? (
           <p className="animate-fade-up text-sm font-medium text-ink">
-            Pronto! 💜 Vamos te avisar pelo Instagram.
+            Anotado seu interesse!
           </p>
         ) : (
           <form onSubmit={handleSubmit} noValidate>
