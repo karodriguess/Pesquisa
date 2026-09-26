@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button.jsx";
 
 const SHARE_TEXT =
-  "Estou participando de uma pesquisa rápida sobre criação de conteúdo. Responde também? Leva menos de 2 minutos 💜";
+  "Estou participando de uma pesquisa rápida sobre criação de conteúdo. Responde também? Leva menos de 1 minuto 💜";
 
 function getShareUrl() {
   return window.location.origin + window.location.pathname;
@@ -37,7 +37,7 @@ export default function ShareButton() {
   }
 
   const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
-    `${SHARE_TEXT}\n${getShareUrl()}`,
+    `${SHARE_TEXT}\n${getShareUrl()}`
   )}`;
 
   return (

@@ -20,7 +20,14 @@ export default function IntroScreen({ onStart }) {
               stroke="currentColor"
               strokeWidth="1.8"
             />
-            <rect x="8.5" y="2.5" width="7" height="3.5" rx="1.5" fill="currentColor" />
+            <rect
+              x="8.5"
+              y="2.5"
+              width="7"
+              height="3.5"
+              rx="1.5"
+              fill="currentColor"
+            />
             <path
               d="M8 11.5l1.4 1.4L12 10.3M8 16.5l1.4 1.4 2.6-2.6"
               stroke="currentColor"
@@ -65,7 +72,7 @@ export default function IntroScreen({ onStart }) {
               strokeLinecap="round"
             />
           </svg>
-          Leva menos de 2 minutos
+          Leva menos de 1 minuto
         </span>
       </div>
 
